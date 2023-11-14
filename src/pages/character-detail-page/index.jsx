@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CharacterDetailsPreview from "../../components/CharacterDetails";
 import Header from "../../components/Header";
 import "../../styles/CharacterDetailPage.css";
@@ -10,7 +11,9 @@ function CharacterDetailPage() {
       </main>
       <span></span>
       <div className="close-btn-div">
-        <div className="close-btn">Close</div>
+        <Link className="close-btn" to="/">
+          Close
+        </Link>
       </div>
     </section>
   );

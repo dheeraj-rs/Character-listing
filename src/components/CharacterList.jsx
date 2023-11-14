@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ForwardIcon from "../assets/fast-forward.png";
 function CharacterList({ CharactersData }) {
   return (
@@ -20,10 +21,13 @@ function CharacterList({ CharactersData }) {
               <td>{character.race}</td>
               <td>{character.gender}</td>
               <td>
-                <span className="details-btn-text">
+                <Link
+                  className="details-btn-text"
+                  to={`/details/${character._id}`}
+                >
                   Details{" "}
                   <img src={ForwardIcon} alt="" className="details-btn-icon" />
-                </span>
+                </Link>
               </td>
             </tr>
           ))}

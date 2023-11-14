@@ -1,12 +1,11 @@
-// import CharacterDetailPage from "./pages/character-detail-page";
-import CharacterListingPage from "./pages/character-list-page";
+import { BrowserRouter } from "react-router-dom";
+import Routing from "./router/Routing";
 
 function App() {
   return (
-    <>
-      <CharacterListingPage />
-      {/* <CharacterDetailPage /> */}
-    </>
+    <BrowserRouter>
+      <Routing />
+    </BrowserRouter>
   );
 }
 
