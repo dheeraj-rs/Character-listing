@@ -30,9 +30,20 @@ select {
   cursor: pointer;
 }
 
+.table-container {
+  height: 60%;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
 @media (max-width: 768px) {
   section {
     border: 1px solid #50505090;
     height: auto;
+  }
+  .table-container {
+    height: auto;
+    padding: 10px;
+    overflow-x: scroll;
   }
 }
