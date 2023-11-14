@@ -1,5 +1,5 @@
-import svg from "../assets/fast-forward.png"
-function CharacterList() {
+import ForwardIcon from "../assets/fast-forward.png";
+function CharacterList({ CharactersData }) {
   return (
     <div className="table-container">
       <table>
@@ -13,15 +13,20 @@ function CharacterList() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>name</td>
-            <td>race</td>
-            <td>gender</td>
-            <td>
-              <span className="details-btn-text">Details <img src={svg} alt="" className="details-btn-icon" /> </span>
-            </td>
-          </tr>
+          {CharactersData?.map((character, index) => (
+            <tr key={character._id}>
+              <td>{index + 1}</td>
+              <td>{character.name}</td>
+              <td>{character.race}</td>
+              <td>{character.gender}</td>
+              <td>
+                <span className="details-btn-text">
+                  Details{" "}
+                  <img src={ForwardIcon} alt="" className="details-btn-icon" />
+                </span>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
