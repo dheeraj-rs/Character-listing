@@ -1,6 +1,7 @@
 import CharacterList from "../../components/CharacterList";
 import Controller from "../../components/Controller";
 import Header from "../../components/Header";
+import Pagination from "../../components/Pagination";
 import "../../styles/CharacterListingPage.css";
 function CharacterListingPage() {
   return (
@@ -12,6 +13,7 @@ function CharacterListingPage() {
         <hr />
         <CharacterList />
         <hr />
+        <Pagination/>
       </main>
     </section>
   );
