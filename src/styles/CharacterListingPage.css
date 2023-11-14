@@ -1,3 +1,4 @@
+/* Controller */
 .main-container {
   padding: 20px;
   display: flex;
@@ -150,6 +151,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* CharacterList */
   .main-container {
     flex-direction: column;
     gap: 10px;
