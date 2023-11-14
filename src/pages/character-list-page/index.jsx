@@ -4,20 +4,18 @@ import Controller from "../../components/Controller";
 import Header from "../../components/Header";
 import Pagination from "../../components/Pagination";
 import "../../styles/CharacterListingPage.css";
-import { FetchCharacters } from "../../service/api/ApiCalls";
+import { getCharacters } from "../../service/api/ApiCalls";
 
 function CharacterListingPage() {
-  const [CharactersData,setCharactersData] = useState([]);
+  const [characterdata,setCharacterdata] = useState([]);
   useEffect(() => {
     getCharacterList();
   }, []);
 
   const getCharacterList = async () => {
-    const fetchResponse = await FetchCharacters()
-    setCharactersData(fetchResponse);
+    const fetchResponse = await getCharacters()
+    setCharacterdata(fetchResponse);
   };
-
-  
 
   return (
     <section>
@@ -26,7 +24,7 @@ function CharacterListingPage() {
         <hr />
         <Controller />
         <hr />
-        <CharacterList CharactersData={CharactersData} />
+        <CharacterList characterdata={characterdata} />
         <hr />
         <Pagination/>
       </main>

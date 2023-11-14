@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ForwardIcon from "../assets/fast-forward.png";
-function CharacterList({ CharactersData }) {
+function CharacterList({ characterdata }) {
   return (
     <div className="table-container">
       <table>
@@ -14,7 +14,7 @@ function CharacterList({ CharactersData }) {
           </tr>
         </thead>
         <tbody>
-          {CharactersData?.map((character, index) => (
+          {characterdata?.map((character, index) => (
             <tr key={character._id}>
               <td>{index + 1}</td>
               <td>{character.name}</td>

@@ -1,49 +1,31 @@
-function CharacterDetails() {
+function CharacterDetails({ characterdetails }) {
   return (
     <table className="detail-table">
-        <tbody>
-          <tr>
-            <td>Name</td>
-            <td>name</td>
-          </tr>
-          <tr>
-            <td>WikiURL</td>
-            <td>WikiURL</td>
-          </tr>
-          <tr>
-            <td>Race</td>
-            <td>Race</td>
-          </tr>
-          <tr>
-            <td>Height</td>
-            <td>Height</td>
-          </tr>
-          <tr>
-            <td>Hair</td>
-            <td>Hair</td>
-          </tr>
-          <tr>
-            <td>Realm</td>
-            <td>Realm</td>
-          </tr>
-          <tr>
-            <td>Birth</td>
-            <td>Birth</td>
-          </tr>
-          <tr>
-            <td>Gender</td>
-            <td>Gender</td>
-          </tr>
-          <tr>
-            <td>Spouse</td>
-            <td>Spouse</td>
-          </tr>
-          <tr>
-            <td>Death</td>
-            <td>Death</td>
-          </tr>
-        </tbody>
+      {characterdetails &&
+        characterdetails.map((user) => (
+          <tbody key={user._id}>
+            <TableRow label="Name" value={user.name} />
+            <TableRow label="WikiURL" value={user.wikiUrl} />
+            <TableRow label="Race" value={user.race} />
+            <TableRow label="Height" value={user.height} />
+            <TableRow label="Hair" value={user.hair} />
+            <TableRow label="Realm" value={user.realm} />
+            <TableRow label="Birth" value={user.birth} />
+            <TableRow label="Gender" value={user.gender} />
+            <TableRow label="Spouse" value={user.spouse} />
+            <TableRow label="Death" value={user.death} />
+          </tbody>
+        ))}
     </table>
+  );
+}
+
+function TableRow({ label, value }) {
+  return (
+    <tr>
+      <td>{label}</td>
+      <td>{value}</td>
+    </tr>
   );
 }
 

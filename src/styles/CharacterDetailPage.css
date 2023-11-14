@@ -36,5 +36,8 @@ td {
   text-decoration: none;
   color: #505050;
 }
-
+.arrow-icon{
+  width: 20px;
+  height: 15px;
+}
 
