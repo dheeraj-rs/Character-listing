@@ -1,8 +1,14 @@
-import "../../styles/CharacterListingPage.css"
+import Header from "../../components/Header";
+import "../../styles/CharacterListingPage.css";
 function CharacterListingPage() {
   return (
-    <div>CharacterListingPage</div>
-  )
+    <section>
+      <main>
+       <Header/>
+        <hr />
+      </main>
+    </section>
+  );
 }
 
-export default CharacterListingPage
+export default CharacterListingPage;
