@@ -25,6 +25,11 @@ hr {
   border-bottom: 1px solid #50505090;
 }
 
+select {
+  padding: 10px;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   section {
     border: 1px solid #50505090;

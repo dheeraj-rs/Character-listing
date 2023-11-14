@@ -1,0 +1,101 @@
+.main-container {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.search-container {
+  min-width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.label {
+  text-wrap: nowrap;
+}
+.search-img {
+  position: absolute;
+  right: 14px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+}
+
+.sort-container {
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 8px;
+}
+.search-container button{
+  padding: 0;
+  border: none;
+}
+
+.sort-option {
+  width: 100%;
+}
+
+.main-container span {
+  flex: 1;
+}
+
+.race-container {
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.race-option {
+  width: 100%;
+}
+.gender-container {
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gender-option {
+  width: 100%;
+}
+
+.submit-btn {
+  padding: 10px 10%;
+  cursor: pointer;
+  min-width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(140deg, #000, #505050a5, #000) border-box;
+  border: 1.5px solid transparent;
+  border-radius: 0.5rem;
+}
+.submit-btn:active{
+    background: linear-gradient(140deg, #000, #505050a5, #000);
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search-container {
+    width: 100%;
+  }
+  .sort-container {
+    width: 100%;
+  }
+  .race-container {
+    width: 100%;
+  }
+  .gender-container {
+    width: 100%;
+  }
+}

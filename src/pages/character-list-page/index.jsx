@@ -1,3 +1,4 @@
+import Controller from "../../components/Controller";
 import Header from "../../components/Header";
 import "../../styles/CharacterListingPage.css";
 function CharacterListingPage() {
@@ -6,6 +7,7 @@ function CharacterListingPage() {
       <main>
        <Header/>
         <hr />
+        <Controller/>
       </main>
     </section>
   );
